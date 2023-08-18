@@ -4,6 +4,7 @@
 }
 .container div .intro{
     width: 100%;
+    /* max-width: 1500px; */
 }
 .container div .form{
   padding: 0 80px;
