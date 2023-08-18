@@ -11,19 +11,21 @@
   list-style: none;
   direction: ltr;
   font-family: "Ubuntu", sans-serif;
+  background-color: unset;
 }
 
 html {
   font-size: 100%;
 }
+
 .intro {
   opacity: 0;
 }
+
 /* LYOUT */
 .container {
   box-shadow: 0px 0px 14px 2px #005aea25;
   width: 95%;
-  max-width: 500px;
   margin: 0 auto;
   height: 95%;
   position: absolute;
@@ -31,15 +33,15 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.container div {
+
+.container>div {
   width: 100;
   height: 100%;
   display: flex;
   position: relative;
+  
 }
-.container div > div {
-  width: 100%;
-}
+
 .container div .form {
   background-color: #005bea;
   width: 90%;
@@ -51,24 +53,69 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 30px;
+  padding: 0 20px;
 }
+
 /* LYOUT */
 
 /* CONTENT */
 form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
+
+.input-box {
+  position: relative;
+  background-color: white;
+  border-radius: 40px;
+  padding: 7px 10px 7px 30px;
+  font-size: 13px;
+  max-width: 300px;
+}
+
+.input-box input {
+  width: 100%;
+  font-size: inherit;
+}
+
 .input-box i {
   position: absolute;
-  top: 18px;
-  left: 12px;
+  left: 9px;
   color: #005aea8a;
   font-size: 17px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-::-webkit-input-placeholder{
-  color: #005aea8a;
+
+.box-password-strength {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  margin-top: 20px;
+  font-size: 11px;
+  align-items: center;
+  width: 100%;
+}
+
+.progress-bar {
+  max-width: 200px;
+  min-width: 200px;
+  height: 5px;
+  background-color: #D7D154;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0048AE;
+  left: -30%;
 }
 
 .form h1 {
@@ -76,79 +123,46 @@ form {
   font-size: 45px;
   font-weight: bold;
   padding-bottom: 30px;
+  text-align: center;
 }
-.input {
-  width: 100%;
-  height: 35px;
-  margin-top: 10px;
-  border-radius: 20px;
-  padding: 0 0 0 40px;
-  font-weight: bold;
-  font-size: 13px;
-  color: #005bea;
-}
-.box-password-strength{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20px;
- 
-}
-.box-password-strength p{
-  color: white;
-  font-size: 11px;
-}
-.line{
-  width: 50px;
-  height: 4px;
-  background-color: #D7D154;
-  border-radius: 5px;
 
-}
-.line.blue{
-  background-color: #0048AE;
-}
 .btns {
   margin-top: 40px;
+  display: flex;
+  gap: 3px;
 }
-.btn-1 {
-  background: rgb(255, 194, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 194, 0, 1) 16%,
-    rgba(224, 123, 13, 1) 96%
-  );
-  width: 150px;
-  height: 35px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
-  font-size: 13px;
 
-  
-}
-.btn-1:hover {
-  background: rgb(224, 123, 13);
-  background: linear-gradient(
-    90deg,
-    rgba(224, 123, 13, 1) 20%,
-    rgba(255, 194, 0, 1) 73%
-  );
-}
-.btn-2 {
-  width: 90px;
-  height: 35px;
-  border-radius: 20px;
-  margin-left: 5px;
-  color: white;
-  background-color: #005bea;
-  border: 1px solid white;
-  cursor: pointer;
-  transition: all 0.2s ease-in;
+.btn {
+  border: 3px solid white;
+  border-radius: 40px;
   font-size: 13px;
- 
+  padding: 6px 20px;
+  font-weight: bold;
+  color: white;
 }
-.btn-2:hover {
+
+.btn.gold {
+  background: linear-gradient(90deg,
+      rgba(255, 194, 0, 1) 16%,
+      rgba(224, 123, 13, 1) 96%);
+  border: unset;
+  color: black;
+}
+
+.btn:hover {
   background-color: rgba(255, 255, 255, 0.13);
+}
+
+.btn.gold:hover {
+  background: rgb(224, 123, 13);
+  background: linear-gradient(90deg,
+      rgba(224, 123, 13, 1) 20%,
+      rgba(255, 194, 0, 1) 73%);
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  background-color: white;
+  z-index: 10;
 }

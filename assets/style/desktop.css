@@ -1,16 +1,35 @@
-.container{
+.container {
   width: 80%;
   height: 80%;
+  max-width: 900px;
 }
-.container div .intro{
-    width: 100%;
-    /* max-width: 1500px; */
+
+.container div .intro {
+  width: 100%;
+  background-size: 50%;
 }
-.container div .form{
+
+.container div .form {
   padding: 0 80px;
 }
-.container div .intro img{
+
+.container div .intro img {
   width: 80%;
   height: 80%;
- 
 }
+/* 
+.circle-1 {
+  bottom: unset;
+  top: 50%;
+  left: 50%;
+  right: unset;
+  transform: translate(-50%, -50%)
+}
+
+.circle-2 {
+  bottom: unset;
+  top: 50%;
+  left: 50%;
+  right: unset;
+  transform: translate(319px, -293px);
+} */
