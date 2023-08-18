@@ -78,6 +78,10 @@ form {
 .input-box input {
   width: 100%;
   font-size: inherit;
+  color: #0048AE;
+}
+::-webkit-input-placeholder{
+  color: #005aea8a;
 }
 
 .input-box i {
@@ -87,6 +91,7 @@ form {
   font-size: 17px;
   top: 50%;
   transform: translateY(-50%);
+ 
 }
 
 .box-password-strength {
@@ -133,10 +138,10 @@ form {
 }
 
 .btn {
-  border: 3px solid white;
+  border: 1px solid white;
   border-radius: 40px;
   font-size: 13px;
-  padding: 6px 20px;
+  padding: 10px 20px;
   font-weight: bold;
   color: white;
 }
